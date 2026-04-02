@@ -68,7 +68,7 @@ button {
 <!-- APP -->
 <div id="app" style="display:none">
 
-<h1 style="text-align:center;">📱 IoT Dashboard</h1>
+<h1 style="text-align:center;"> IoT Dashboard</h1>
 
 <div class="container">
 
@@ -102,7 +102,7 @@ button {
 
 <script>
 
-// 🔥 CONFIG
+//  CONFIG
 const firebaseConfig = {
   apiKey: "AIzaSyA3COCLo3bs_BknN4PLgtRo3nvG7rkae0k",
   authDomain: "sae-radio.firebaseapp.com",
@@ -111,7 +111,7 @@ const firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 
-// 🔐 LOGIN
+//  LOGIN
 function login(){
   let email = document.getElementById("email").value;
   let password = document.getElementById("password").value;
@@ -120,12 +120,12 @@ function login(){
     .catch(err => alert(err.message));
 }
 
-// 🔓 LOGOUT
+//  LOGOUT
 function logout(){
   firebase.auth().signOut();
 }
 
-// 🔄 SESSION
+//  SESSION
 firebase.auth().onAuthStateChanged(user => {
   if(user){
     document.getElementById("login").style.display = "none";
@@ -136,7 +136,7 @@ firebase.auth().onAuthStateChanged(user => {
   }
 });
 
-// 📡 DATABASE
+// DATABASE
 const db = firebase.database();
 
 // GRAPH
